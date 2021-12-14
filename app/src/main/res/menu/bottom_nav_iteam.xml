@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+   <item
+       android:id="@+id/Dash"
+       android:icon="@drawable/ic_bdashborad"
+       android:title="Dashborad"/>
+    <item
+        android:id="@+id/Shudule"
+        android:icon="@drawable/ic_baseline_schedule_24"
+        android:title="Schedule"/>
+    <item
+        android:id="@+id/Setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Setting"/>
+    <item
+        android:id="@+id/Service"
+        android:icon="@drawable/ic_baseline_electrical_services_24"
+        android:title="Service"/>
+
+</menu>

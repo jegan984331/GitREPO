@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.bottomnavigation_protecttai">
+<uses-permission android:name="android.permission.READ_CALL_LOG"/>
+<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BottomNavigation_protecttai">
+        <activity
+            android:name=".Fragement.ScduleAlaram.Notificationclick"
+            android:exported="false" />
+        <activity
+            android:name=".Fragement.Sharedpereference.view_perference"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".Fragement.Service.NewService"/>
+
+
+
+        <receiver android:name=".Fragement.ScduleAlaram.AlaramRicever"
+            android:enabled="true"
+            android:exported="true">
+        </receiver>
+
+        <receiver android:name=".Fragement.Broadcast.CallRecevier"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+             <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".Fragement.Broadcast.Airplane"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
